@@ -1,0 +1,19 @@
+[
+  {
+    "Id": "0",
+    "Name": "1.0",
+    "DevelopmentStatus": "Stable",
+    "Description": "Version 1.0",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2013-04-20T03:57:37.757-07:00",
+    "Files": [
+      {
+        "Id": "95968b37-f997-49d8-a7ee-c464d7cc1bd3",
+        "FileName": "CWC Map Generator 1.0.zip",
+        "Url": "./0/95968b37-f997-49d8-a7ee-c464d7cc1bd3",
+        "Type": "Application",
+        "UploadDate": "2013-04-20T03:57:37.553-07:00"
+      }
+    ]
+  }
+]

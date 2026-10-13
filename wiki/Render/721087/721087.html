@@ -1,0 +1,48 @@
+<div class="wikidoc">Sceneries define the general settings of the map: the climate, textures, tree types, etc.<br /><br />The sceneries are saved as XML-files in the <i>Sceneries</i> folder. To create a new scenery, simply create a new file in there or copy and adjust one of the existing files.<br /><br />An example scenery definition looks like this:<br /><br /><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;Scenery Name=&quot;Snow&quot; Weather=&quot;Snow&quot;&gt;
+  &lt;BaseTexture Name=&quot;SnowLargeType1&quot; Size=&quot;384&quot;/&gt;
+  &lt;OverlayTextures&gt;
+    &lt;Texture Name=&quot;SnowType5&quot; Size=&quot;256&quot; Granularity=&quot;0.05&quot;/&gt;
+    &lt;Texture Name=&quot;SnowType6&quot; Size=&quot;256&quot; Granularity=&quot;0.1&quot;/&gt;
+  &lt;/OverlayTextures&gt;
+  &lt;CliffTexture Name=&quot;CliffMediumType17bsnowy&quot; Size=&quot;256&quot;/&gt;
+  &lt;CliffOverlayTextures&gt;
+    &lt;Texture Name=&quot;CliffMediumType17b&quot; Size=&quot;256&quot; Granularity=&quot;0.23&quot;/&gt;
+  &lt;/CliffOverlayTextures&gt;
+  &lt;Trees&gt;
+    &lt;Tree&gt;CWCnatTreePine3snow&lt;/Tree&gt;
+    &lt;Tree&gt;CWCnatTreeDogwood1Snow&lt;/Tree&gt;
+    &lt;Tree&gt;CWCnatTreeSpruce03Snow&lt;/Tree&gt;
+    &lt;Tree&gt;CWCnatTreeSpruce04Snow&lt;/Tree&gt;
+    &lt;Tree&gt;CWCnatTreeSpruce05Snow&lt;/Tree&gt;
+  &lt;/Trees&gt;
+  &lt;Rocks&gt;
+    &lt;Rock&gt;Rocks8&lt;/Rock&gt;
+    &lt;Rock&gt;Rocks9&lt;/Rock&gt;
+    &lt;Rock&gt;Rocks10&lt;/Rock&gt;
+  &lt;/Rocks&gt;
+  &lt;Road&gt;TwoLane&lt;/Road&gt;
+&lt;/Scenery&gt;</pre>
+<ul><li>The <i>Name</i> attribute of the Scenery tag can be chosen freely.</li></ul>
+
+<ul><li>The <i>Weather</i> attribute can be either <i>Normal</i> or <i>Snow</i>. If you use <i>Snow</i>, all objects will use their snow textures (if applicable).</li></ul>
+
+<ul><li>There has to be one <i>BaseTexture</i> element.
+<ul><li>The <i>Name</i> must be the name of the texture.</li>
+<li><i>Size</i> must be set to the side length of the texture in pixels. If you’re not sure about the size, extract the texture from the <i>Terrain.big</i> or <i>TerrainZH.big</i> files and open it in a graphics program.</li></ul></li></ul>
+
+<ul><li>There can be multiple <i>Texture</i> elements in the <i>OverlayTextures</i> element.
+<ul><li>Overlay textures are painted over the base texture like small &quot;stains&quot;.</li>
+<li>Each texture has to has its <i>Name</i> and <i>Size</i> set just like the base texture.</li>
+<li>The <i>Granularity</i> determines the size of the stains. The smaller the granularity value, the larger the stains will be.</li></ul></li></ul>
+
+<ul><li>Just like there is a <i>BaseTexture</i> and multiple <i>OverlayTextures</i>, you can set a <i>CliffTexture</i> and <i>CliffOverlayTextures</i>. These will be used for the generated mountains.</li></ul>
+
+<ul><li>You can add multiple <i>Tree</i> elements in the <i>Trees</i> element.
+<ul><li>Each tree must have its <i>Name</i> set to the name of the object type.</li>
+<li>You can add the same tree multiple times to increase the probability of this tree to be chosen.</li></ul></li></ul>
+
+<ul><li>Defining rocks works just like defining trees.</li></ul>
+
+<ul><li>In the <i>Road</i> element, you can specify the road type that should be used in the map.</li></ul>
+</div><div class="ClearBoth"></div>
